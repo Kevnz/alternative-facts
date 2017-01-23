@@ -1,0 +1,23 @@
+{
+  "name": "alternative-facts",
+  "version": "0.0.1",
+  "description": "JS lib that intercepts code and delivers incorrect values",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kevnz/alternative-facts.git"
+  },
+  "keywords": [
+    "test",
+    "testing"
+  ],
+  "author": "Kevin Isom <kevin.isom@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Kevnz/alternative-facts/issues"
+  },
+  "homepage": "https://github.com/Kevnz/alternative-facts#readme"
+}
