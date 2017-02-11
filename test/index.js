@@ -74,6 +74,3 @@ test('booleans should be booleans', t => {
   t.is(typeof tools.bool, 'boolean');
 });
 
-test('complex objects', t => {
-
-})
