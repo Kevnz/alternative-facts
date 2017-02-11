@@ -1,10 +1,11 @@
 {
   "name": "alternative-facts",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "JS lib that intercepts code and delivers incorrect values",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "ava",
+    "watch": "ava --watch"
   },
   "repository": {
     "type": "git",
@@ -19,5 +20,15 @@
   "bugs": {
     "url": "https://github.com/Kevnz/alternative-facts/issues"
   },
-  "homepage": "https://github.com/Kevnz/alternative-facts#readme"
+  "homepage": "https://github.com/Kevnz/alternative-facts#readme",
+  "dependencies": {
+    "fuxor": "^2.2.1",
+    "randomatic": "^1.1.6",
+    "scramble": "0.0.4",
+    "shuffle-words": "^0.1.2",
+    "stochator": "^0.6.2"
+  },
+  "devDependencies": {
+    "ava": "^0.18.1"
+  }
 }
