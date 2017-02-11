@@ -36,7 +36,6 @@ const wrapper = (module) => {
             return scramble(result);
           }
           if (typeof result === 'boolean') {
-            console.log('boolean for ' + prop, result);
             return !result;
           }
           if (typeof result === 'number') {
@@ -84,17 +83,15 @@ fuxor.wrap(wrapper);
 
 const clear = () => {
   fuxor.clear();
-  blacklist.splice(0, blacklist.length);
+  blacklist.empty();
 }
 const af = function (...methodsToChange) {
   blacklist.push(...methodsToChange);
   return {
     reset: () => {
       clear();
-      console.log('blacklist after reset', blacklist);
     },
     init: (...methodsToChange) => {
-      console.log('af init called')
       clear();
       blacklist.push(...methodsToChange);
       fuxor.wrap(wrapper);
