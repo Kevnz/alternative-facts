@@ -1,20 +1,18 @@
-'use strict';
-
-var util = require('util');
+const util = require('util')
 module.exports = {
-  xformat: function xformat(base, arg1, arg2) {
+  xformat: function (base, arg1, arg2) {
     return util.format(base, arg1, arg2);
   },
   bool: true,
   string: 'This is a string',
   number: 21,
-  strings: function strings() {
+  strings: function() {
     return 'This is another string';
   },
-  numbers: function numbers() {
+  numbers: function() {
     return 42;
   },
-  bools: function bools() {
+  bools: function () {
     return false;
   }
-};
+}
