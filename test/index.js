@@ -73,4 +73,21 @@ test('booleans should be booleans', t => {
   t.is(typeof tools.bools(), 'boolean');
   t.is(typeof tools.bool, 'boolean');
 });
-
+test('numbers should be back to normal', t => {
+  af.reset();
+  af.init('number', 'numbers');
+  const tools = require('../tools/helpers');
+  af.reset();
+  const tools2 = require('../tools/helpers');
+  t.is(tools2.numbers(), 42);
+  t.is(tools2.number, 21);
+});
+test('booleans should be back to normal', t => {
+  af.reset();
+  af.init('bool', 'bools');
+  const tools = require('../tools/helpers');
+  af.reset();
+  const tools2 = require('../tools/helpers');
+  t.not(tools2.bools(), true);
+  t.not(tools2.bool, false);
+});

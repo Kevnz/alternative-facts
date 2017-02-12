@@ -56,13 +56,20 @@ const wrapper = (module) => {
         module[prop] = trumpedProperties.get(prop);
       }
       if (typeof module[prop] === 'number' && blacklist.includes(prop)) {
-        const origProp = module[prop];
-        const newNumber = numberGen(origProp);
-        if (newNumber !== origProp) {
-          module[prop] = newNumber
-        } else {
-          module[prop] = numberGen(origProp);
+        if (!trumpedProperties.has(prop)) {
+          const origProp = module[prop];
+          trumpedProperties.set(prop, origProp);
+          const newNumber = numberGen(origProp);
+          if (newNumber !== origProp) {
+            module[prop] = newNumber
+          } else {
+            module[prop] = numberGen(origProp);
+          }
         }
+      } else if(typeof module[prop] === 'number'
+        && !blacklist.includes(prop)
+        && trumpedProperties.has(prop)) {
+        module[prop] = trumpedProperties.get(prop);
       }
       if (typeof module[prop] === 'boolean' && blacklist.includes(prop)) {
         if (!trumpedProperties.has(prop)) {
