@@ -6,7 +6,7 @@ JS lib that intercepts code and delivers incorrect values
 
 ### API
 #### Setup
-```:javascript
+```js
 // require
 const alternativeFacts = require('alternative-facts')
 const af = alternativeFacts('format'); 
@@ -18,7 +18,7 @@ const result = tools.format('%s:%s','foo','bar');
 ```
 
 #### reset
-```:javascript
+```js
 af.reset();
 const util2 = require('util');
 const result2 = utils2.format('%s:%s','foo','bar');
@@ -26,7 +26,7 @@ const result2 = utils2.format('%s:%s','foo','bar');
 ```
 
 #### init
-```:javascript
+```js
 af.reset();
 af.init('format');
 const util3 = require('util');
