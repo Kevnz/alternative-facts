@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>alternative-facts</title>
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+  <meta name="description" content="JS lib that intercepts code and delivers incorrect values" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+  <div class="container">
+  <h1 id="alternative-facts">Alternative-Facts</h1>
+<p><a href="https://travis-ci.org/Kevnz/alternative-facts"><img src="https://travis-ci.org/Kevnz/fuxor.png?branch=master" alt="Build Status" /></a></p>
+<h2 id="when-you-want-to-make-the-truth-false">When you want to make the truth false.</h2>
+<p>JS lib that intercepts code and delivers incorrect values</p>
+<h3 id="api">API</h3>
+<h4 id="setup">Setup</h4>
+<pre><code class="js language-js">// require
+const alternativeFacts = require('alternative-facts')
+const af = alternativeFacts('format');
+//override any method or property named format
+const util = require('util');
+const result = tools.format('%s:%s','foo','bar');
+// result will be scrambled from "foo:bar"</code></pre>
+<h4 id="reset">reset</h4>
+<pre><code class="js language-js">af.reset();
+const util2 = require('util');
+const result2 = utils2.format('%s:%s','foo','bar');
+// result is now "foo:bar"</code></pre>
+<h4 id="init">init</h4>
+<pre><code class="js language-js">af.reset();
+af.init('format');
+const util3 = require('util');
+const result3 = utils3.format('%s:%s','foo','bar');
+// scambled again</code></pre>
+  </div>
+</body>
