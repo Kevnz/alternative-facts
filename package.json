@@ -1,8 +1,11 @@
 {
   "name": "alternative-facts",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "JS lib that intercepts code and delivers incorrect values",
   "main": "index.js",
+  "engines": {
+    "node": ">= 8"
+  },
   "scripts": {
     "build": "babel ./src -d .",
     "test": "mocha",
