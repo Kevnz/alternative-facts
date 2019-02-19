@@ -1,6 +1,7 @@
-'use strict';
+"use strict";
 
 var util = require('util');
+
 module.exports = {
   xformat: function xformat(base, arg1, arg2) {
     return util.format(base, arg1, arg2);
