@@ -17,8 +17,10 @@ const numberGen = function (number) {
 const trumpedProperties = new Map();
 
 const wrapper = (module) => {
+
   for (let prop in module) {
     if (module.hasOwnProperty(prop)) {
+
       if (typeof module[prop] === 'function' && blacklist.includes(prop)) {
         const origMethod = module[prop];
         module[prop] = function (...args) {
@@ -44,6 +46,7 @@ const wrapper = (module) => {
           return result;
         }
       }
+
       if (typeof module[prop] === 'string' && blacklist.includes(prop)) {
         if (!trumpedProperties.has(prop)) {
           const origProp = module[prop];
