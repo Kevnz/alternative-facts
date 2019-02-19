@@ -1,6 +1,6 @@
 # Alternative-Facts
 
-[![Build Status](https://travis-ci.org/Kevnz/fuxor.png?branch=master)](https://travis-ci.org/Kevnz/alternative-facts)
+[![npm version](https://badge.fury.io/js/alternative-facts.svg)](https://badge.fury.io/js/alternative-facts) [![Build Status](https://travis-ci.org/Kevnz/fuxor.png?branch=master)](https://travis-ci.org/Kevnz/alternative-facts)
 
 ## When you want to make the truth false.
 
