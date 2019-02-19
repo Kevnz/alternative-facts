@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "babel ./src -d .",
-    "test": "ava",
-    "watch": "ava --watch"
+    "test": "mocha",
+    "watch": "mocha --watch"
   },
   "repository": {
     "type": "git",
@@ -23,15 +23,20 @@
   },
   "homepage": "https://github.com/Kevnz/alternative-facts#readme",
   "dependencies": {
-    "fuxor": "^2.2.1",
-    "randomatic": "^1.1.6",
+    "fuxor": "^2.2.2",
+    "randomatic": "^3.1.1",
     "scramble": "0.0.4",
     "shuffle-words": "^0.1.2",
     "stochator": "^0.6.2"
   },
   "devDependencies": {
-    "ava": "^0.18.1",
-    "babel-cli": "^6.22.2",
-    "babel-preset-env": "^1.1.8"
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.3",
+    "@babel/preset-env": "^7.3.1",
+    "@kev_nz/eslint-config": "^3.2.0",
+    "@kev_nz/publisher": "^1.0.1",
+    "chai": "^4.2.0",
+    "eslint": "^5.14.1",
+    "mocha": "^6.0.0"
   }
 }
