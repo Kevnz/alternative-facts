@@ -4,7 +4,7 @@ describe('The module', () => {
 
   it('change string results', done => {
     const af = require('../src/index')('xformat');
-    const tools = require('../src/tools/helpers');
+    const tools = require('./tools/helpers');
     const result = tools.xformat('%s:%s','foo','bar');
     const shouldBe = 'foo:bar';
     expect(result).not.to.equal(shouldBe);
@@ -15,7 +15,7 @@ describe('The module', () => {
     const af = require('../src/index')('xformat');
     af.reset();
     af.init();
-    const tools = require('../src/tools/helpers');
+    const tools = require('./tools/helpers');
     const result = tools.xformat('%s:%s','foo','bar');
     const shouldBe = 'foo:bar';
     expect(result).to.equal(shouldBe);
@@ -26,7 +26,7 @@ describe('The module', () => {
     const af = require('../src/index')('xformat');
     af.reset();
     af.init('string', 'strings');
-    const tools = require('../src/tools/helpers');
+    const tools = require('./tools/helpers');
 
     expect(tools.strings()).not.to.equal('This is another string');
     expect(tools.string).not.to.equal('This is a string');
@@ -37,7 +37,7 @@ describe('The module', () => {
     const af = require('../src/index')('xformat');
     af.reset();
     af.init();
-    const tools = require('../src/tools/helpers');
+    const tools = require('./tools/helpers');
 
     expect(tools.strings()).to.equal('This is another string');
     expect(tools.string).to.equal('This is a string');
@@ -48,7 +48,7 @@ describe('The module', () => {
     const af = require('../src/index')('xformat');
     af.reset();
     af.init('string', 'strings');
-    const tools = require('../src/tools/helpers');
+    const tools = require('./tools/helpers');
 
     expect(typeof tools.strings()).to.equal('string')
     expect(typeof tools.string).to.equal('string')
@@ -60,7 +60,7 @@ describe('The module', () => {
     const af = require('../src/index')('xformat');
     af.reset();
     af.init('number', 'numbers');
-    const tools = require('../src/tools/helpers');
+    const tools = require('./tools/helpers');
 
     expect(tools.numbers()).not.to.equal(42)
     expect(tools.number).not.to.equal(21)
@@ -72,7 +72,7 @@ describe('The module', () => {
     const af = require('../src/index')('xformat');
     af.reset();
     af.init('number', 'numbers');
-    const tools = require('../src/tools/helpers');
+    const tools = require('./tools/helpers');
 
     expect(typeof tools.numbers()).to.equal('number')
     expect(typeof tools.number).to.equal('number')
@@ -84,7 +84,7 @@ describe('The module', () => {
     const af = require('../src/index')('bools', 'bool');
     af.reset();
     af.init('bools', 'bool');
-    const tools = require('../src/tools/helpers');
+    const tools = require('./tools/helpers');
 
     expect(tools.bools()).to.equal(true)
     expect(tools.bool).to.equal(false)
@@ -97,7 +97,7 @@ describe('The module', () => {
     const af = require('../src/index')('xformat');
     af.reset();
     af.init('bool', 'bools');
-    const tools = require('../src/tools/helpers');
+    const tools = require('./tools/helpers');
 
     expect(typeof tools.bools()).to.equal('boolean')
     expect(typeof tools.bool).to.equal('boolean')
@@ -107,7 +107,7 @@ describe('The module', () => {
   it('numbers should be back to normal', done => {
     const af = require('../src/index')('xformat');
     af.init('number', 'numbers');
-    const tools = require('../src/tools/helpers');
+    const tools = require('./tools/helpers');
     af.reset();
 
     expect(tools.numbers()).to.equal(42)
@@ -120,7 +120,7 @@ describe('The module', () => {
     af.init('bool', 'bools');
 
     af.reset();
-    const tools = require('../src/tools/helpers');
+    const tools = require('./tools/helpers');
     expect(tools.bools()).to.equal(false)
     expect(tools.bool).to.equal(true)
     done()
