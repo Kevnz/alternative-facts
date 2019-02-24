@@ -1,7 +1,7 @@
 const shuffle = require('shuffle-words');
 const scramble = require('scramble');
-require('./tools/array');
-const blacklist = [];
+const CustomArray = require('./helpers/array')
+const blacklist = new CustomArray();
 const fuxor = require('fuxor');
 const Stochator = require('stochator');
 
