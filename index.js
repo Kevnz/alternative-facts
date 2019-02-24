@@ -4,9 +4,9 @@ var shuffle = require('shuffle-words');
 
 var scramble = require('scramble');
 
-require('./tools/array');
+var CustomArray = require('./helpers/array');
 
-var blacklist = [];
+var blacklist = new CustomArray();
 
 var fuxor = require('fuxor');
 
