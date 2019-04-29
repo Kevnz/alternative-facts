@@ -34,15 +34,15 @@
     "stochator": "^0.6.2"
   },
   "devDependencies": {
-    "@babel/cli": "^7.2.3",
-    "@babel/core": "^7.3.3",
-    "@babel/preset-env": "^7.3.1",
-    "@kev_nz/eslint-config": "^3.2.0",
-    "@kev_nz/publisher": "^2.1.0",
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "@kev_nz/eslint-config": "^3.3.0",
+    "@kev_nz/publisher": "^4.0.1",
     "chai": "^4.2.0",
     "coveralls": "^3.0.3",
-    "eslint": "^5.14.1",
-    "mocha": "^6.0.1",
-    "nyc": "^13.3.0"
+    "eslint": "^5.16.0",
+    "mocha": "^6.1.4",
+    "nyc": "^14.0.0"
   }
 }
