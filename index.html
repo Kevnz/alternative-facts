@@ -2,37 +2,62 @@
 <html lang="en">
 
 <head>
-  <title>alternative-facts</title>
+  <title>alternative-facts - JS lib that intercepts code and delivers incorrect values - Kevin Isom</title>
   <link rel="stylesheet" type="text/css" href="styles.css" />
-  <meta name="description" content="JS lib that intercepts code and delivers incorrect values" />
+  <link rel="stylesheet" type="text/css" href="extend.css" />
+  <meta name="description" content="alternative-facts - JS lib that intercepts code and delivers incorrect values - Kevin Isom" />
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/styles/github.min.css" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="alternative-facts - JS lib that intercepts code and delivers incorrect values - Kevin Isom" />
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="alternative-facts - JS lib that intercepts code and delivers incorrect values - Kevin Isom" />
+  <meta property="og:url" content="https://kevinisom.info/async-tools" />
+  <meta property="og:image" content="https://avatars3.githubusercontent.com/u/62547?s=400&amp;v=4" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@kev_nz" />
+  <meta name="twitter:title" content="alternative-facts - JS lib that intercepts code and delivers incorrect values - Kevin Isom" />
+  <meta name="twitter:description" content="alternative-facts - JS lib that intercepts code and delivers incorrect values - Kevin Isom" />
+  <meta name="twitter:image" content="https://avatars3.githubusercontent.com/u/62547?s=400&amp;v=4" />
+
 </head>
 
 <body>
   <div class="container">
   <h1 id="alternative-facts">Alternative-Facts</h1>
-<p><a href="https://badge.fury.io/js/alternative-facts"><img src="https://badge.fury.io/js/alternative-facts.svg" alt="npm version" /></a> <a href="https://travis-ci.org/Kevnz/alternative-facts"><img src="https://travis-ci.org/Kevnz/fuxor.png?branch=master" alt="Build Status" /></a></p>
+<p><a href="https://badge.fury.io/js/alternative-facts"><img src="https://badge.fury.io/js/alternative-facts.svg" alt="npm version" /></a> <a href="https://travis-ci.org/Kevnz/alternative-facts"><img src="https://travis-ci.org/Kevnz/fuxor.png?branch=master" alt="Build Status" /></a> <a href="https://forthebadge.com"><img src="https://forthebadge.com/images/badges/its-not-a-lie-if-you-believe-it.svg" alt="forthebadge" /></a></p>
 <h2 id="when-you-want-to-make-the-truth-false">When you want to make the truth false.</h2>
 <p>JS lib that intercepts code and delivers incorrect values</p>
 <h3 id="api">API</h3>
 <h4 id="setup">Setup</h4>
-<pre><code class="js language-js">// require
-const alternativeFacts = require('alternative-facts')
-const af = alternativeFacts('format');
-//override any method or property named format
-const util = require('util');
-const result = tools.format('%s:%s','foo','bar');
-// result will be scrambled from "foo:bar"</code></pre>
+<pre><code class="hljs javascript language-javascript"><span class="hljs-comment">// require</span>
+<span class="hljs-keyword">const</span> alternativeFacts = <span class="hljs-built_in">require</span>(<span class="hljs-string">'alternative-facts'</span>)
+<span class="hljs-keyword">const</span> af = alternativeFacts(<span class="hljs-string">'format'</span>)
+<span class="hljs-comment">//override any method or property named format</span>
+<span class="hljs-keyword">const</span> util = <span class="hljs-built_in">require</span>(<span class="hljs-string">'util'</span>);
+<span class="hljs-keyword">const</span> result = tools.format(<span class="hljs-string">'%s:%s'</span>,<span class="hljs-string">'foo'</span>,<span class="hljs-string">'bar'</span>)
+<span class="hljs-comment">// result will be scrambled from "foo:bar"</span></code></pre>
 <h4 id="reset">reset</h4>
-<pre><code class="js language-js">af.reset();
-const util2 = require('util');
-const result2 = utils2.format('%s:%s','foo','bar');
-// result is now "foo:bar"</code></pre>
+<pre><code class="hljs javascript language-javascript">af.reset()
+<span class="hljs-keyword">const</span> util2 = <span class="hljs-built_in">require</span>(<span class="hljs-string">'util'</span>)
+<span class="hljs-keyword">const</span> result2 = utils2.format(<span class="hljs-string">'%s:%s'</span>,<span class="hljs-string">'foo'</span>,<span class="hljs-string">'bar'</span>)
+<span class="hljs-comment">// result is now "foo:bar"</span></code></pre>
 <h4 id="init">init</h4>
-<pre><code class="js language-js">af.reset();
-af.init('format');
-const util3 = require('util');
-const result3 = utils3.format('%s:%s','foo','bar');
-// scambled again</code></pre>
+<pre><code class="hljs javascript language-javascript">af.reset()
+af.init(<span class="hljs-string">'format'</span>)
+<span class="hljs-keyword">const</span> util3 = <span class="hljs-built_in">require</span>(<span class="hljs-string">'util'</span>)
+<span class="hljs-keyword">const</span> result3 = utils3.format(<span class="hljs-string">'%s:%s'</span>,<span class="hljs-string">'foo'</span>,<span class="hljs-string">'bar'</span>)
+<span class="hljs-comment">// scambled again</span></code></pre>
   </div>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-64038939-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-64038939-2');
+</script>
+
 </body>
