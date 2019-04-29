@@ -1,6 +1,6 @@
 {
   "name": "alternative-facts",
-  "version": "2.0.2",
+  "version": "2.1.0",
   "description": "JS lib that intercepts code and delivers incorrect values",
   "main": "index.js",
   "engines": {
